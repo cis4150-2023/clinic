@@ -26,5 +26,5 @@ Credits:
   - Ryan Shirlock - Team Leader/Coordinator & Webpage Designer
  
   Work-Orders Team:
-  - Alex Xylona - Role
+  - Alex Xylona - Programmer
   - Myles Pierce - Team Leader/Coordinator
