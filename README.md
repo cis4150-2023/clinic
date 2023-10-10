@@ -27,4 +27,7 @@ Credits:
  
   Work-Orders Team:
   - Alex Xylona - Programmer
+  - Linden Griffith - Programmer
+  - Bailey Jackson - Programmer
+  - Gabriel Buxton - Programmer
   - Myles Pierce - Team Leader/Coordinator
