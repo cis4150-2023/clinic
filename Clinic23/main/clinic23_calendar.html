@@ -1,0 +1,185 @@
+<!--Austin Hegarty-->
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+		<title>Clinic23 Calendar</title>
+		<meta charset="utf-8">
+		<!--<link rel="stylesheet" href="style.css">-->
+        <style>
+            table, th {
+                text-align: center;
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 3.25% 0%;
+            }
+            td {
+                height: 2%;
+                border: 1px solid black;
+                display:fixed;
+                padding-bottom: 7%;
+            }
+            p {
+                text-align: left;
+                margin: .4%;
+                padding: 0px;
+                top: 0px;
+                left: 0px;
+            }
+            #dayHeader{
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding-top: .4%;
+                padding-bottom: .4%;
+             }
+            #prevButton {
+                background-color: lightblue;
+                border: 2px solid black;
+                color: black;
+                padding: 1% 2.5%;
+                text-align: center;
+                text-decoration: none;
+                font-size: 16px;
+                margin: .3%;
+                cursor: pointer;
+                float: left;
+                }
+            #nextButton {
+                background-color: lightblue;
+                border: 2px solid black;
+                color: black;
+                padding: 1% 2.5%;
+                text-align: center;
+                text-decoration: none;
+                font-size: 16px;
+                margin: .3%;
+                cursor: pointer;
+                float: right;
+            }
+            #selectOne{
+                background-color: lightblue;
+                margin-left: 30%;
+                width: 10%;
+                padding: 1%;
+            }
+            #selectTwo{
+                background-color: lightblue;
+                width: 10%;
+                padding: 1%;
+            }
+            #fixedButton {
+                background-color: green;
+                padding-top: 1%;
+                padding-bottom: 1%;
+                padding-left: 1.5%;
+                padding-right: 1.5%; 
+                position: fixed;
+                bottom: 5%;
+                right: 5%; 
+            }
+        </style>
+		</head>
+        <div>
+        <header>
+            <button id="prevButton">
+                Previous
+            </button>
+                <select id="selectOne">
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October" selected>October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+                <select id="selectTwo">
+                    <option value="2023" selected>2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                </select>
+            <button id="nextButton">
+                Next
+            </button>
+        </header>
+        <body>
+            <table width="100%">
+                <tr>
+                    <th width="12%" id="dayHeader" >Sunday</th>
+                    <th width="12%" id="dayHeader">Monday</th>
+                    <th width="12%" id="dayHeader">Tuesday</th>
+                    <th width="12%" id="dayHeader">Wednesday</th>
+                    <th width="12%" id="dayHeader">Thursday</th>
+                    <th width="12%" id="dayHeader">Friday</th>
+                    <th width="12%" id="dayHeader">Saturday</th>
+                </tr>
+                <tr>
+                    <td><p>1</p></td>
+                    <td><p>2</p></td>
+                    <td><p>3</p></td>
+                    <td><p>4</p></td>
+                    <td><p>5</p></td>
+                    <td><p>6</p></td>
+                    <td><p>7</p></td>
+                </tr>
+                <tr>
+                    <td><p>8</p></td>
+                    <td><p>9</p></td>
+                    <td><p>10</p></td>
+                    <td><p>11</p></td>
+                    <td><p>12</p></td>
+                    <td><p>13</p></td>
+                    <td><p>14</p></td>
+                </tr>
+                <tr>
+                    <td><p>15</p></td>
+                    <td><p>16</p></td>
+                    <td><p>17</p></td>
+                    <td><p>18</p></td>
+                    <td><p>19</p></td>
+                    <td><p>20</p></td>
+                    <td><p>21</p></td>
+                </tr>
+                <tr>
+                    <td><p>22</p></td>
+                    <td><p>23</p></td>
+                    <td><p>24</p></td>
+                    <td><p>25</p></td>
+                    <td><p>26</p></td>
+                    <td><p>27</p></td>
+                    <td><p>28</p></td>
+                </tr>
+                <tr>
+                    <td><p>29</p></td>
+                    <td><p>30</p></td>
+                    <td><p>31</p></td>
+                    <td><p></p></td>
+                    <td><p></p></td>
+                    <td><p></p></td>
+                    <td><p></p></td>
+                </tr>
+                <tr>
+                    <td><p></p></td>
+                    <td><p></p></td>
+                    <td><p></p></td>
+                    <td><p></p></td>
+                    <td><p></p></td>
+                    <td><p></p></td>
+                    <td><p></p></td>
+                </tr>
+            </table>
+            <button id="fixedButton">
+                Add New Event
+            </button>
+        </body>
+        </div>
+    </html>
