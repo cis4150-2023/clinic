@@ -1,0 +1,131 @@
+<!-- Created by: Josh -->
+<!-- Modified: 10/12/23 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Northern Psychiatric Services </title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+	</head>
+<title>
+    Medical Record
+</title>
+<style>
+    h1
+    {
+        font-family: sans-serif;
+        padding-top: 20px;
+    }
+    .vitals 
+    {
+        border: 1px solid black;
+        border-collapse:collapse;
+    }
+    .vitals th
+    {
+        border: 1px solid black;
+        background-color:#aeb6bf;
+    }
+    .vitals td
+    {
+        border: 1px solid black;
+    }
+    .checkbox td
+    {
+        padding-right: 20px;
+        text-align: left;
+    }
+    #submit
+    {
+        background-color:#b3ccff;
+    }
+</style>    
+</head>
+    
+<body>
+<form>
+    
+<!--Vitals section-->    
+<h1>Vitals</h1>
+    
+<table class="vitals">
+    <tr>
+        <th>Date/Time</th>
+        <th>Temp</th>
+        <th>BP</th>
+        <th>Pulse</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>BMI</th>
+        <th>O2 Sat</th>
+    </tr>
+    <tr>
+        <td><input type="datetime-local" name="datetime"></td>
+        <td><input type="text" name="temp" size="5"></td>
+        <td><input type="text" name="bp" size="5"></td>
+        <td><input type="text" name="pulse" size="5"></td>
+        <td><input type="text" name="height" size="5"></td>
+        <td><input type="text" name="weight" size="5"></td>
+        <td><input type="text" name="bmi" size="5"></td>
+        <td><input type="text" name="o2" size="5"></td>
+    </tr>
+</table>
+    
+<!--Nose/sinus-->    
+<h1>Nose/Sinus</h1>
+    
+<table class="checkbox">
+    <tr>
+        <td><label for="nsbleed">Nose Bleeds</label>
+            <input type="checkbox" id="nsbleed" name="nsbleed" value="nosebleed"></td>
+        <td><label for="stfness">Stuffiness</label>
+            <input type="checkbox" id="stfness" name="stfness" value="stuffiness"></td>
+        <td><label for="fcough">Frequent Cough</label>
+            <input type="checkbox" id="fcough" name="fcough" value="frequentcough"></td>
+    </tr>
+</table>
+ 
+<!--Hearing-->    
+<h1>Ears</h1>
+  <table class="checkbox">
+    <tr>
+        <td><label for="hear">Hearing</label>
+            <input type="checkbox" id="hear" name="hear" value="hearing"></td>
+        <td><label for="earpn">Ear Pain</label>
+            <input type="checkbox" id="earpn" name="earpn" value="earpain"></td>
+        <td><label for="dscharge">Discharge</label>
+            <input type="checkbox" id="dscharge" name="dscharge" value="discharge"></td>
+    </tr>
+</table>  
+    
+<!--Vision-->    
+<h1>Eyes</h1>
+<table class="checkbox">
+    <tr>
+        <td><label for="glsses">Glasses</label>
+            <input type="checkbox" id="glsses" name="glsses" value="glasses"></td>
+        <td><label for="dblvision">Double Vision</label>
+            <input type="checkbox" id="dblvision" name="dblvision" value="doublevision"></td>
+        <td><label for="lflashes">Light Flashes</label>
+            <input type="checkbox" id="lflashes" name="lflashes" value="lightflashes"></td>
+        <td><label for="gcoma">Glaucoma</label>
+            <input type="checkbox" id="gcoma" name="gcoma" value="glaucoma"></td>
+    </tr>
+</table>
+    
+<label for="exdate">Exam Date</label>
+<input type="date" id="exdate" name="exdate">
+   
+<!--Comments-->    
+<h1>Comments</h1>
+    <textarea id="cmnts" name="comments" rows="4" cols="50"></textarea><br>
+    
+    
+<!--Form submission-->    
+<input id="submit" type="submit">
+    
+</form>
+</body>
+</html>
+<!--Josh Remillard 10/11/23-->

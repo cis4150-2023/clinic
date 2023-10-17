@@ -1,0 +1,31 @@
+<!-- Created by: Ryan Shirlock -->
+<!-- Additional Credits:
+    - https://html.com/frames/#The_Basic_Idea_Behind_Frames (FRAMESET REFREENCE MATERIAL) -->
+<!-- Modified: 10/17/23 -->
+
+<!DOCTYPE html>
+<html>
+    
+	<head>
+		<title> Northern Psychiatric Services </title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+    
+    <script>
+        function disableResize()
+        {
+            parent.document.getElementById("index").noResize = true
+            parent.document.getElementById("info").noResize = true
+            parent.document.getElementById("chapters").noResize = true
+        }
+    </script>
+        
+            <frameset rows="7%,93%">
+                <frame src="indexSelect.html" name="index">
+                <frameset cols="30%,70%">
+                    <frame src="patientInfo.html" name="info">
+                    <frame src="workorder.html" name="chapters">
+                </frameset>
+            </frameset>
+    
+</html>

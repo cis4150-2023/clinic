@@ -1,0 +1,50 @@
+<!-- Created by: David-->
+<!-- Modified: 10/17/23 -->
+
+<!DOCTYPE html>
+<html>
+	<main>
+		<body>
+		<div>
+		<header>Billing Statement</header>
+		<form>
+			<label>Patient Name:
+			<input type="text"></label><br>
+			<label>Provider:
+			<input type="text"></label><br>
+			<label>TIN:
+			<input type="tel"></label><br>
+			<label>Statement Made:
+			<input type="date"></label><br>
+			<label>Account Number:
+			<input type="number"></label><br>
+			<label>Service Date:
+			<input type="date"></label><br>
+			<label>Service Provided:
+			<input type="radio" id="Visit" name="service" value="Visit"><label>Visit</label>
+			<input type="radio" id="Procedure" name="service" value="Procedure"><label>Procedure</label>
+			<input type="radio" id="Test" name="service" value="Test"><label>Test</label>
+			</label><br>
+			<label>Healthcare Provider:
+			<input type="text"></label><br>
+			<label>Total Charge: $
+			<input type ="number" min= "0.00" step="0.01"></label><br>
+			<label>Insurance Provider:
+			<input type="text"></label><br>
+			<label>Policy Number:
+			<input type="text"></label><br>
+			<label>Insurance Payment: $
+			<input type ="number" min= "0.00" step="0.01"></label><br>
+			<label>Patient's Payments So Far: $
+			<input type ="number" min= "0.00" step="0.01"></label><br>
+			<label>Balance Due: $
+			<input type ="number" min= "0.00" step="0.01"></label><br>
+			<label>Payment Due:
+			<input type="date"></label><br>
+			<label> Payment can be done with Cash, Credit, or Check.<br>
+			<input type="submit"></input>
+		</form>
+		<div>
+		</body>
+	</main>
+</html>
