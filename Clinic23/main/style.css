@@ -1,0 +1,512 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter&family=Crimson+Text&display=swap");
+
+:root {
+    --orange: #d89a47;
+    --blue: #27474e;
+    --offWhite: #d8e0d7;
+    --white: whitesmoke;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Crimson Text", serif;
+}
+
+body {
+    background-color: var(--offWhite);
+}
+
+header {
+    position: fixed;
+    align-items: flex-start;
+    background-color: var(--blue);
+    border: 0;
+    color: var(--orange);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-size: 2em;
+    gap: 1em;
+    justify-content: flex-start;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+}
+
+footer {
+    background-color: var(--blue);
+    border: 0;
+    color: var(--orange);
+    font-size: 1em;
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1em;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+a:link,
+a:visited {
+    background-color: var(--orange);
+    border: none;
+    border-radius: 0.5em;
+    color: var(--blue);
+    font-size: 1.25em;
+    padding: 6px 12px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover,
+a:active {
+    background-color: var(--offWhite);
+}
+
+h2 {
+    color: var(--orange);
+    font-size: 2em;
+}
+
+.placeholder {
+    height: 75px;
+    width: 100%;
+}
+
+.whiteCard {
+    background-color: var(--white);
+    border-radius: 0.5em;
+    margin: 1em;
+    padding: 1.5em;
+}
+
+.saveButton {
+    align-items: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-size: 1.25em;
+    gap: 3em;
+    padding: 0.5em;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+input[type="submit"] {
+    background-color: var(--orange);
+    border: none;
+    border-radius: 0.5em;
+    color: var(--blue);
+    font-size: 1.25em;
+    padding: 6px 12px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:active {
+    background-color: var(--offWhite);
+}
+
+input[type="text"] {
+    border: 2px solid var(--orange);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/*********** Begin Medical Profile Page **************/
+
+#profileGrid {
+    border: 0;
+    color: var(--blue);
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 720px;
+}
+
+.profileItem {
+    align-items: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-size: 1em;
+    gap: 1em;
+    padding: 0.5em;
+    justify-content: flex-end;
+    width: 75%;
+}
+
+#kglabel {
+    margin-right: 45px;
+}
+
+#reviewGrid {
+    border: 0;
+    color: var(--blue);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+}
+
+.reviewItem {
+    align-items: flex-start;
+    color: var(--blue);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.5em;
+    width: 100%;
+}
+
+.rosGroup > p {
+    font-size: 1em;
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.commentBox > textarea {
+    width: 100%;
+    height: 100px;
+    color: var(--blue);
+    border: 2px solid var(--orange);
+    padding: 10px;
+    font-size: 1em;
+    resize: none;
+}
+
+.commentBox > label {
+    font-size: 1em;
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.dropBox > label {
+    font-size: 1em;
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.dropBox > input {
+    font-size: 1em;
+    padding: 2px;
+    margin-left: 5px;
+    color: var(--blue);
+    border: 2px solid var(--orange);
+    border-radius: 2px;
+}
+
+#familyHistory {
+    align-items: flex-start;
+    color: var(--blue);
+    border-top: 2px solid var(--blue);
+    border-bottom: 2px solid var(--blue);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2px;
+    margin-bottom: 1.5em;
+    width: 100%;
+}
+
+.familyMember {
+    margin: 12px;
+    padding: 5px;
+    border: 2px solid var(--orange);
+    border-radius: 5px;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1em;
+    width: 95%;
+}
+
+.familyMember h4 {
+    font-weight: bolder;
+}
+
+/*********** End Medical Profile Page **************/
+
+/*********** Begin Patient Page **************/
+
+.patientBody {
+    display: flex;
+    height: 89vh;
+    padding: 10px;
+}
+
+.btn-primary {
+    background-color: var(--orange);
+    border-color: var(--orange);
+}
+
+.patientNote {
+    flex-grow: 1;
+    border-radius: 5px;
+    height: 100%;
+    transition: 0.2s;
+}
+
+#patientFormCard,
+.card-body,
+#patientNoteForm {
+    height: 100%;
+}
+
+#patientFormCard {
+    background-color: var(--white);
+    border-radius: 0.5em;
+}
+
+#patientNoteForm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#patientNoteForm .formField {
+    width: 40%;
+}
+
+#patientFormSubmit {
+    place-self: flex-end;
+    margin-right: 15px;
+}
+
+.patientSideMenu {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    overflow: auto;
+    margin-right: 10px;
+}
+
+.patientSideMenuBtn {
+    margin: 5px;
+    width: 150px;
+    transition: 0.2s;
+    color: var(--blue);
+}
+
+.patientSideMenuBtn:hover,
+.patientSideMenuBtn:focus,
+.patientSideMenuBtn:focus-visible,
+.patientSideMenuBtn:active {
+    background-color: var(--orange);
+    border-color: var(--orange);
+}
+
+.patientSideMenuLink {
+    padding: 0.375rem 0.75rem !important;
+    border-radius: 0.25rem !important;
+    color: var(--blue);
+    margin: 5px !important;
+    width: 150px;
+    transition: 0.2s;
+    font-size: 1rem !important;
+}
+
+input.patientSideMenuLink:hover,
+input.patientSideMenuLink:focus,
+input.patientSideMenuLink:focus-visible,
+input.patientSideMenuLink:active,
+.patientSideMenuBtn:hover,
+.patientSideMenuBtn:focus,
+.patientSideMenuBtn:focus-visible,
+.patientSideMenuBtn:active,
+#patientFormSubmit:hover,
+#patientFormSubmit:active,
+#patientFormSubmit:focus,
+#patientFormSubmit:focus-visible {
+    background-color: var(--orange) !important;
+    border-color: var(--orange) !important;
+}
+
+.patientMenuBox {
+    transition: 0.2s;
+    margin: 0px 5px 5px 5px;
+    top: -5px;
+    width: 150px;
+    height: 0px;
+}
+
+.patientMenuItem {
+    top: -5px;
+}
+
+.expandedWidth {
+    width: 600px;
+}
+
+.expandedHeight {
+    height: auto;
+}
+
+#patientHeader {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.hideContent {
+    display: none;
+}
+
+/********* End Patient Page ************/
+
+/********* Start Pharmacy Forms ************/
+
+.rowOfInputs {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#lab_checkboxes label {
+    padding-left: 2%;
+}
+
+/********* End Pharmacy Forms ************/
+
+/********* Start Index Page ************/
+
+#searchForm {
+    width: 575px;
+    border: solid 3px var(--blue);
+    padding-top: 36px;
+}
+
+#searchGrid {
+    border: 0;
+    color: var(--blue);
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+}
+
+.searchItem {
+    align-items: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-size: 1.5em;
+    gap: 3em;
+    padding: 0.5em;
+    justify-content: flex-end;
+    width: 75%;
+}
+
+#noapp {
+    color: var(--blue);
+    margin-left: 12px;
+    font-size: 1em;
+}
+
+/********* End Index Page ************/
+
+/********* Begin New Patient and Edit Patient Page ************/
+
+.newPGrid {
+    border: 0;
+    color: var(--blue);
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 720px;
+}
+
+.newPItem {
+    align-items: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-size: 1em;
+    gap: 1em;
+    padding: 0.5em;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.npItem {
+    color: var(--blue);
+    align-items: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-size: 1em;
+    gap: 1em;
+    padding: 0.5em;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.tableBill {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.tableBill td,
+.tableBill th {
+    border: 1px solid var(--offWhite);
+    padding: 8px;
+}
+
+.tableBill tr:nth-child(even) {
+    background-color: white;
+}
+
+.tableBill tr:hover {
+    background-color: var(--offWhite);
+}
+
+.tableBill th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--blue);
+    color: var(--orange);
+    margin-left: 6px;
+}
+
+#totalStr {
+    color: var(--blue);
+    margin-left: 24px;
+}
+
+/********* End New Patient Page ************/
+
+/********* Begin Note and Note History Page ************/
+
+#footer {
+    background-color: var(--blue);
+    border: 0;
+    color: var(--orange);
+    font-size: 1em;
+    bottom: 0;
+    position: fixed;
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1em;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+/********* End Note and Note History Page ************/
