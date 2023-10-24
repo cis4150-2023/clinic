@@ -9,7 +9,8 @@ patients, receptionists, system admins, and nurses.
 The Spring 2023 Team's code is included as reference material.
 
 Credits:
-  - Spring 2023 Team - Built the foundation we stand (and improve) upon. 
+
+  Spring 2023 Team - Built the foundation we stand (and improve) upon. 
  
   Backing/Inner-Workings Team:
   - Evan Morse - Team Leader/Coordinator & Github
@@ -18,16 +19,16 @@ Credits:
   - Nick Slocik - Team Leader/Coordinator
  
   Interface Team:
-  - Kathleen Niekrewicz - Webpage Designer
-  - John Luce - PHP Coder/Documentarian
-  - Josh Remillard - Webpage Designer
   - Austin Hegarty - PHP Coder/Documentarian
   - David Howard - Webpage Designer
+  - John Luce - PHP Coder/Documentarian
+  - Josh Remillard - Webpage Designer
+  - Kathleen Niekrewicz - Webpage Designer
   - Ryan Shirlock - Team Leader/Coordinator & Webpage Designer
  
   Work-Orders Team:
   - Alex Xylona - Programmer
-  - Linden Griffith - Programmer
   - Bailey Jackson - Programmer
   - Gabriel Buxton - Programmer
+  - Linden Griffith - Programmer
   - Myles Pierce - Team Leader/Coordinator
