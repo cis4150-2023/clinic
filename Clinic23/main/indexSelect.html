@@ -2,6 +2,7 @@
 <!-- Additional Credits:
     - https://html.com/frames/#The_Basic_Idea_Behind_Frames (FRAMESET REFREENCE MATERIAL)
     - https://stackoverflow.com/questions/44884990/opening-a-link-in-the-same-tab-with-html 
+    - https://www.rapidtables.com/web/html/link/html-link-new-window.html {Popup Window}
 <!-- Modified: 10/17/23 -->
 
 <!DOCTYPE html>
@@ -13,14 +14,19 @@
 	</head>
     
     <body>
+        
         <h4> 
             <a href="PatientList.html" target="_parent"> Back </a>
             <a href="workorder.html" target="chapters"> Workorders: </a>
             <a href="clinic23_calendar.html" target="chapters"> Calendar: </a>
             <a href="MedicalRecord.html" target="chapters"> Medical Records: </a>
-            <a href="Billing_Statement_Page.html" target="chapters"> Medical Billing Statement: </a>
+            <a href="Billing_Statement_Page.html" target="chapters"> Billing Statement: </a>
             <a href="pharmacy.html" target="chapters"> Prescriptions: </a>
+            
+            <a href="notes.html" target="_blank" onclick="window.open('notes.html','Patient Notes','width=640,height=480')"rel= “noopener”> Notes: </a>
 
         </h4>
+        
     </body>
+    
 </html>
