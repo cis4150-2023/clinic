@@ -1,7 +1,7 @@
 <!-- Created by: Ryan Shirlock -->
 <!-- Additional Credits:
     - https://html.com/frames/#The_Basic_Idea_Behind_Frames (FRAMESET REFREENCE MATERIAL) -->
-<!-- Modified: 10/17/23 -->
+<!-- Modified: 10/26/23 -->
 
 <!DOCTYPE html>
 <html>
@@ -17,14 +17,16 @@
             parent.document.getElementById("index").noResize = true
             parent.document.getElementById("info").noResize = true
             parent.document.getElementById("chapters").noResize = true
+            parent.document.getElementById("notes").noResize = true
         }
     </script>
         
-            <frameset rows="7%,93%">
+            <frameset rows="7%,*%">
                 <frame src="indexSelect.html" name="index">
-                <frameset cols="30%,70%">
+                <frameset cols="20%,*,30%">
                     <frame src="patientInfo.html" name="info">
                     <frame src="workorder.html" name="chapters">
+                    <frame src="notes.html" name="notes">
                 </frameset>
             </frameset>
     
