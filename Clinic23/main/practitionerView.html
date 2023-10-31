@@ -11,17 +11,7 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
     
-    <script>
-        function disableResize()
-        {
-            parent.document.getElementById("index").noResize = true
-            parent.document.getElementById("info").noResize = true
-            parent.document.getElementById("chapters").noResize = true
-            parent.document.getElementById("notes").noResize = true
-        }
-    </script>
-        
-            <frameset rows="7%,*%">
+            <frameset noResize rows="11%,*%">
                 <frame src="indexSelect.html" name="index">
                 <frameset cols="20%,*,30%">
                     <frame src="patientInfo.html" name="info">
