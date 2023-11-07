@@ -1,6 +1,6 @@
 <!-- Created by: Josh -->
-<!-- Modified: 10/26/23 - Additional Fields added to page, submit button added to vitals -->
-<!--           10/31/23 - Removed in-line style, styling now in style.css                -->
+<!-- Modified: 11/06/23-->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +47,7 @@
     </tr>
 </table>
 
-    <input id="submit" type="submit">
+    <input id="submit" type="submit" onclick="confirmSubmission()">
 </form>
 </div>
     
@@ -110,10 +110,15 @@
         <td><label>Glaucoma</label>
             <input type="checkbox" name="ros[]" value="glaucoma"></td>
     </tr>
-</table>
-<div class=examdate>    
+    <tr>
+        <td>
+        <div class=examdate>    
 <label>Exam Date</label>
 <input type="date" name="ros[]">
+            </div>
+        </td>
+    </tr>
+</table>
 </div>    
 
     
@@ -438,10 +443,16 @@
     
     
 <!--Form submission-->    
-<input id="submit" type="submit">
+<input id="submit" type="submit" onclick="confirmSubmission()">
     
 </div> 
 <!--end record of services form-->    
 </form>
+
+<script>
+function confirmSubmission() {
+  alert("Submission Successful");
+}
+</script>
 </body>
 </html>
