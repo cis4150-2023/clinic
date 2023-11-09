@@ -1,0 +1,59 @@
+<!-- Created by: Austin -->
+<!-- Modified: 11/9/23 -->
+
+<!DOCTYPE HTML>
+<html lang="'en">
+    <head>
+        <title>Clinic23 Add New Calendar Event</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <div>
+        <body>
+            <br>
+            <form>
+                <h1 style="text-align: center;">Event Details</h1>
+                <br>
+            <table>
+                <tr>
+                    <th>Doctor Name</th>
+                    <th>Patient Name</th>
+                    <th>Date/Time</th>
+                    <th>Duration</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="doctorname" required></td>
+                    <td><input type="text" name="patientname" required></td>
+                    <td><input type="datetime-local" name="datetime" required></td>
+                    <td><select name="duration" required>
+                        <option value="15minutes">15 Minutes</option>
+                        <option value="30minutes">30 Minutes</option>
+                        <option value="45minutes">45 Minutes</option>
+                        <option value="1hour">1 Hour</option>
+                    </select></td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr>
+                    <th>Location</th>
+                    <th>Purpose</th>
+                    <th>Notes</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="location" required></td>
+                    <td><input type="text" name="purpose" required></td>
+                    <td><textarea name="Notes" rows="4" cols="50"></textarea></td>
+                </tr>
+            </table>
+            <a href="clinic23_calendar.html" style="position:fixed; right: 17%; bottom: 5%; padding: 1.5%">Back</a>
+            <input style="position:fixed; right: 5%; bottom: 5%; padding: 1.5%" type="submit" onclick="submittedEvent()">
+            </form>
+        </body>
+    </div>
+    <script>
+        function submittedEvent() {
+          alert("Submission Successful, Event Added");
+        }
+        </script>
+</html>
