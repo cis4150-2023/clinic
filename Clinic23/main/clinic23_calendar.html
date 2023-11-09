@@ -1,5 +1,5 @@
 <!-- Created by: Austin -->
-<!-- Modified: 10/31/23 -->
+<!-- Modified: 11/9/23 -->
 
 <!DOCTYPE HTML>
 <html lang="en">
@@ -172,97 +172,30 @@
             </button>
         </body>
         </div>
-
         <script>
             document.getElementById('nextButton').onclick = function(){
                 const $select = document.querySelector('#selectOne');
                 const $select2 = document.querySelector('#selectTwo');
-                if($select.value == 'January'){
-                    $select.value = 'February';
-                } else if ($select.value == 'February'){
-                    $select.value = 'March';
-                } else if ($select.value == 'March'){
-                    $select.value = 'April';
-                } else if ($select.value == 'April'){
-                    $select.value = 'May';
-                } else if ($select.value == 'May'){
-                    $select.value = 'June';
-                } else if ($select.value == 'June'){
-                    $select.value = 'July';
-                } else if ($select.value == 'July'){
-                    $select.value = 'August';
-                } else if ($select.value == 'August'){
-                    $select.value = 'September';
-                } else if ($select.value == 'September'){
-                    $select.value = 'October';
-                } else if ($select.value == 'October'){
-                    $select.value = 'November';
-                } else if ($select.value == 'November'){
-                    $select.value = 'December';
-                } else if ($select.value == 'December'){
-                    $select.value = 'January';
-                    if($select2.value == '2023'){
-                        $select2.value = '2024';
-                    } else if ($select2.value == '2023'){
-                        $select2.value = '2024';
-                    } else if ($select2.value == '2024'){
-                        $select2.value = '2025';
-                    } else if ($select2.value == '2025'){
-                        $select2.value = '2026';
-                    } else if ($select2.value == '2026'){
-                        $select2.value = '2027';
-                    } else if ($select2.value == '2027'){
-                        $select2.value = '2028';
-                    } else if ($select2.value == '2028'){
-                        $select2.value = '2029';
-                    } else if ($select2.value == '2029'){
-                        $select2.value = '2030';
-                    } 
+                const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                const $indexMonth = months.indexOf($select.value);
+                if($select.value == months[months.length-1]){
+                    $select.value = months[0];
+                    $select2.value++;
+                } else {
+                    $select.value = months[$indexMonth + 1];
                 }
-            };
+            }
             document.getElementById('prevButton').onclick = function(){
                 const $select = document.querySelector('#selectOne');
                 const $select2 = document.querySelector('#selectTwo');
-                if($select.value == 'December'){
-                    $select.value = 'November';
-                } else if ($select.value == 'November'){
-                    $select.value = 'October';
-                } else if ($select.value == 'October'){
-                    $select.value = 'September';
-                } else if ($select.value == 'September'){
-                    $select.value = 'August';
-                } else if ($select.value == 'August'){
-                    $select.value = 'July';
-                } else if ($select.value == 'July'){
-                    $select.value = 'June';
-                } else if ($select.value == 'June'){
-                    $select.value = 'May';
-                } else if ($select.value == 'May'){
-                    $select.value = 'April';
-                } else if ($select.value == 'April'){
-                    $select.value = 'March';
-                } else if ($select.value == 'March'){
-                    $select.value = 'February';
-                } else if ($select.value == 'February'){
-                    $select.value = 'January';
-                } else if ($select.value == 'January'){
-                    $select.value = 'December';
-                    if($select2.value == '2030'){
-                        $select2.value = '2029';
-                    } else if ($select2.value == '2029'){
-                        $select2.value = '2028';
-                    } else if ($select2.value == '2028'){
-                        $select2.value = '2027';
-                    } else if ($select2.value == '2027'){
-                        $select2.value = '2026';
-                    } else if ($select2.value == '2026'){
-                        $select2.value = '2025';
-                    } else if ($select2.value == '2025'){
-                        $select2.value = '2024';
-                    } else if ($select2.value == '2024'){
-                        $select2.value = '2023';
-                    }
+                const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                const $indexMonth = months.indexOf($select.value);
+                if($select.value == months[0]){
+                    $select.value = months[months.length-1];
+                    $select2.value--;
+                } else {
+                    $select.value = months[$indexMonth - 1];
                 }
-            }
+                }
         </script>
     </html>
