@@ -1,6 +1,6 @@
 # Northern Psychiatric Services Website MK.II
 
-       The purpose of this repository is to help rebuild and renew the Nothern Psychiatric Services web page from Spring 2023 at VTC (Now Vermont State University/VTSU). The webpage starts on a landing page, where the practitioner/patient can log in. Once logged in, the practitioner can view patients under their care, while patients will be able to view upcoming and prior appointments. The webpage is designed to be easy and intuitive to use, accommodating doctors & practitioners, patients, receptionists, system admins, and nurses. 
+The purpose of this repository is to help rebuild and renew the Nothern Psychiatric Services web page from Spring 2023 at VTC (Now Vermont State University/VTSU). The webpage starts on a landing page, where the practitioner/patient can log in. Once logged in, the practitioner can view patients under their care, while patients will be able to view upcoming and prior appointments. The webpage is designed to be easy and intuitive to use, accommodating doctors & practitioners, patients, receptionists, system admins, and nurses. 
 
 The Spring 2023 Team's code is included as reference material.
 
