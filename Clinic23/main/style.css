@@ -141,6 +141,18 @@ input[type="text"] {
 
 /*********** Begin Medical Profile Page **************/
 
+/****For Clinic 23 medical assessment****/
+
+.vitals table {
+    width: fit-content;
+    margin: auto;
+}
+.vitals th {
+    text-align: center;
+}
+
+/****End Clinic 23 assessment css****/
+
 #profileGrid {
     border: 0;
     color: var(--highlight);
@@ -148,6 +160,7 @@ input[type="text"] {
     grid-template-columns: auto auto;
     width: 720px;
 }
+
 
 .profileItem {
     align-items: flex-end;
