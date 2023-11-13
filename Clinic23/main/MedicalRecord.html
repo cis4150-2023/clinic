@@ -1,5 +1,5 @@
 <!-- Created by: Josh -->
-<!-- Modified: 11/06/23-->
+<!-- Modified: 11/12/23-->
 
 
 <!DOCTYPE html>
@@ -37,8 +37,8 @@
     </tr>
     <tr>
         <td><input type="datetime-local" name="datetime"></td>
-        <td><input type="text" name="temp" size="5"></td>
-        <td><input type="text" name="bp" size="5"></td>
+        <td><input type="text" name="temp" size="5"> </td>
+        <td><input type="text" name="bp_systolic" size="2">/<input type="text" name="bp_diastolic" size="2"></td>
         <td><input type="text" name="pulse" size="5"></td>
         <td><input type="text" name="height" size="5"></td>
         <td><input type="text" name="weight" size="5"></td>
@@ -47,15 +47,25 @@
     </tr>
 </table>
 
-    <input id="submit" type="submit" onclick="confirmSubmission()">
+    <input id="submit" type="submit" value="Submit Vitals" onclick="confirmSubmission()">
 </form>
 </div>
     
     
 <!--Record of services form-->
-<form>    
+<form>
+<div class = assessmentPracticioner>    
+<label for="practicioner">Practicioner:</label>
+  <select name="practicioner">
+    <option value=""></option>
+    <option value="tookey">Tookey</option>
+    <option value="hibbert">Hibbert</option>
+    <option value="soidberg">Zoidberg</option>
+    <option value="strange">Strange</option>
+  </select>
+    </div>    
 <div class=rostables style="overflow-x:auto;"><!--div for responsive tables-->
-    
+<!--Record of Service fields sourced from '22 final project-->    
 <div class=recordtable>
 <!--Nose/sinus-->    
 <h1>Nose/Sinus</h1>
@@ -435,7 +445,7 @@
 </table>  
 </div>      
 
-</div>
+
 <div class=recordtable>    
 <!--Comments-->    
 <h1>Comments</h1>
@@ -443,7 +453,7 @@
     
     
 <!--Form submission-->    
-<input id="submit" type="submit" onclick="confirmSubmission()">
+<input id="submit" type="submit" value="Submit Assessment"onclick="confirmSubmission()">
     
 </div> 
 <!--end record of services form-->    
