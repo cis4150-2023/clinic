@@ -21,26 +21,26 @@
                 padding-bottom: .4%;
              }
             #prevButton {
-                border: 2px solid black;
-                font-size: 16px;
                 margin: .3%;
                 border-radius: .5em;
                 cursor: pointer;
                 float: left;
+                color: var(--buttonTxt);
+                font-size: 1.25em;
                 }
             #nextButton {
-                border: 2px solid black;
-                font-size: 16px;
                 margin: .3%;
                 border-radius: .5em;
                 cursor: pointer;
                 float: right;
+                color: var(--buttonTxt);
+                font-size: 1.25em;
             }
             #selectOne{
                 margin-left: 10%;
                 border-radius: .5em;
                 width: 20%;
-                font-size: 16px;
+                font-size: 1.25em;
                 text-align: center;
                 padding: 1%;
             }
@@ -49,15 +49,15 @@
                 margin-top: .3%;
                 border-radius: .5em;
                 text-align: center;
-                font-size: 16px;
+                font-size: 1.25em;
                 padding: 1%;
             }
             #fixedButton { 
                 position: fixed;
-                font-size: 16px;
                 bottom: 5%;
                 right: 5%; 
-                border-radius: .5em;
+                padding-top: 1.5%;
+                padding-bottom: 1.5%;
             }
             button.calendar{
                 width: 20%;
@@ -85,8 +85,8 @@
                     <option value="July">July</option>
                     <option value="August">August</option>
                     <option value="September">September</option>
-                    <option value="October" selected>October</option>
-                    <option value="November">November</option>
+                    <option value="October" >October</option>
+                    <option value="November" selected>November</option>
                     <option value="December">December</option>
                 </select>
                 <select id="selectTwo">
@@ -113,47 +113,47 @@
                     <th id="dayHeader" class="calendar">Saturday</th>
                 </tr>
                 <tr>
+                    <td><p></p></td>
+                    <td><p></p></td>
+                    <td><p></p></td>
                     <td><p>1</p></td>
                     <td><p>2</p></td>
                     <td><p>3</p></td>
                     <td><p>4</p></td>
+                </tr>
+                <tr>
                     <td><p>5</p></td>
                     <td><p>6</p></td>
                     <td><p>7</p></td>
-                </tr>
-                <tr>
                     <td><p>8</p></td>
                     <td><p>9</p></td>
                     <td><p>10</p></td>
                     <td><p>11</p></td>
+                </tr>
+                <tr>
                     <td><p>12</p></td>
                     <td><p>13</p></td>
                     <td><p>14</p></td>
-                </tr>
-                <tr>
                     <td><p>15</p></td>
                     <td><p>16</p></td>
                     <td><p>17</p></td>
                     <td><p>18</p></td>
+                </tr>
+                <tr>
                     <td><p>19</p></td>
                     <td><p>20</p></td>
                     <td><p>21</p></td>
-                </tr>
-                <tr>
                     <td><p>22</p></td>
                     <td><p>23</p></td>
                     <td><p>24</p></td>
                     <td><p>25</p></td>
+                </tr>
+                <tr>
                     <td><p>26</p></td>
                     <td><p>27</p></td>
                     <td><p>28</p></td>
-                </tr>
-                <tr>
                     <td><p>29</p></td>
                     <td><p>30</p></td>
-                    <td><p>31</p></td>
-                    <td><p></p></td>
-                    <td><p></p></td>
                     <td><p></p></td>
                     <td><p></p></td>
                 </tr>
@@ -167,9 +167,7 @@
                     <td><p></p></td>
                 </tr>
             </table>
-            <button id="fixedButton" class="calendar">
-                Add New Event
-            </button>
+            <a href="calendar_addevent.html" id="fixedButton" class="calendar">Add New Event</a>
         </body>
         </div>
         <script>
