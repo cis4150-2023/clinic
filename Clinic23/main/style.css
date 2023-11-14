@@ -1,19 +1,24 @@
+/* CSS originally created by Spring 2023 Team */
+/* Modified by: Ryan.S */
+
+
 @import url("https://fonts.googleapis.com/css2?family=Bitter&family=Crimson+Text&display=swap");
 
 :root {
     --text: yellow;
     --highlight: navy;
-    --button: green;
-    --buttonTxt: lime;
+    --button: darkcyan;
+    --buttonTxt: #cce6ff;
+    --buttonHighlight: #008BFF;
     --backgrnd: lightblue;
-    --form: lightgrey;
+    --form: #9999ff;
     --border: black;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
-    font-family: "Crimson Text", serif;
+    font-family: "Lucidia Console", monospace;
 }
 
 body {
@@ -59,7 +64,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 1em;
+    margin: 1em;
     align-items: flex-start;
     justify-content: flex-start;
 }
@@ -67,7 +72,7 @@ footer {
 a:link,
 a:visited {
     background-color: var(--button);
-    border: none;
+    border: var(--border);
     border-radius: 0.5em;
     color: var(--buttonTxt);
     font-size: 1.25em;
@@ -82,7 +87,7 @@ a:visited {
 
 a:hover,
 a:active {
-    background-color: var(--backgrnd);
+    background-color: var(--buttonHighlight);
 }
 
 h2 {
@@ -122,7 +127,7 @@ input[type="submit"] {
     border-radius: 0.5em;
     color: var(--buttonTxt);
     font-size: 1.25em;
-    padding: 6px 12px;
+    padding: 6px 12px; 
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
@@ -130,7 +135,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover,
 input[type="submit"]:active {
-    background-color: var(--backgrnd);
+    background-color: --highlight;
 }
 
 input[type="text"] {
@@ -360,8 +365,8 @@ input.patientSideMenuLink:active,
 #patientFormSubmit:active,
 #patientFormSubmit:focus,
 #patientFormSubmit:focus-visible {
-    background-color: var(--text) !important;
-    border-color: var(--text) !important;
+    background-color: var(--button) !important;
+    border-color: var(--border) !important;
 }
 
 .patientMenuBox {
