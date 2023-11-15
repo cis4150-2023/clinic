@@ -396,6 +396,17 @@ input.patientSideMenuLink:active,
 
 /********* End Patient Page ************/
 
+/********* Start Patient History ************/
+.phistory{
+    padding-bottom: 50px;
+}
+.rosHistory td {
+    min-width: 75px;
+}
+
+
+/********* End Patient History ************/
+
 /********* Start Pharmacy Forms ************/
 
 .rowOfInputs {
