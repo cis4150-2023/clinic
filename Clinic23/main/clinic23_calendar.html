@@ -127,7 +127,7 @@ header .calendar-current-date {
 }
 
 .calendar-dates li.active::before {
-	background: #6332c5;
+	background: var(--highlight);
 }
 
 .calendar-dates li:not(.active):hover::before {
@@ -143,6 +143,12 @@ header .calendar-current-date {
             button.calendar{
                 width: 20%;
             }
+			#calendar-prev:hover{
+				color: var(--highlight);
+			}
+			#calendar-next:hover{
+				color: var(--highlight);
+			}
     </style>
 </head>
 
