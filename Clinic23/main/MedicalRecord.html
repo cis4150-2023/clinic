@@ -1,5 +1,6 @@
 <!-- Created by: Josh -->
-<!-- Modified: 10/26/23 - Additional Fields added to page, submit button added to vitals -->
+<!-- Modified: 11/12/23-->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,36 +14,6 @@
     Medical Record
 </title>
     
-<style>
-    h1
-    {
-        font-family: sans-serif;
-        padding-top: 20px;
-    }
-    .vitals table 
-    {
-        border: 1px solid black;
-        border-collapse:collapse;
-    }
-    .vitals th
-    {
-        border: 1px solid black;
-        background-color:#aeb6bf;
-    }
-    .vitals td
-    {
-        border: 1px solid black;
-    }
-    .rostables td
-    {
-        padding-right: 20px;
-        text-align: left;
-    }
-    #submit
-    {
-        background-color:#b3ccff;
-    }
-</style>    
 </head>
     
 <body>
@@ -66,8 +37,8 @@
     </tr>
     <tr>
         <td><input type="datetime-local" name="datetime"></td>
-        <td><input type="text" name="temp" size="5"></td>
-        <td><input type="text" name="bp" size="5"></td>
+        <td><input type="text" name="temp" size="5"> </td>
+        <td><input type="text" name="bp_systolic" size="2">/<input type="text" name="bp_diastolic" size="2"></td>
         <td><input type="text" name="pulse" size="5"></td>
         <td><input type="text" name="height" size="5"></td>
         <td><input type="text" name="weight" size="5"></td>
@@ -76,15 +47,25 @@
     </tr>
 </table>
 
-    <input id="submit" type="submit">
+    <input id="submit" type="submit" value="Submit Vitals" onclick="confirmSubmission()">
 </form>
 </div>
     
     
 <!--Record of services form-->
-<form>    
+<form>
+<div class = assessmentPracticioner>    
+<label for="practicioner">Practicioner:</label>
+  <select name="practicioner">
+    <option value=""></option>
+    <option value="tookey">Tookey</option>
+    <option value="hibbert">Hibbert</option>
+    <option value="soidberg">Zoidberg</option>
+    <option value="strange">Strange</option>
+  </select>
+    </div>    
 <div class=rostables style="overflow-x:auto;"><!--div for responsive tables-->
-    
+<!--Record of Service fields sourced from '22 final project-->    
 <div class=recordtable>
 <!--Nose/sinus-->    
 <h1>Nose/Sinus</h1>
@@ -139,10 +120,15 @@
         <td><label>Glaucoma</label>
             <input type="checkbox" name="ros[]" value="glaucoma"></td>
     </tr>
-</table>
-<div class=examdate>    
+    <tr>
+        <td>
+        <div class=examdate>    
 <label>Exam Date</label>
 <input type="date" name="ros[]">
+            </div>
+        </td>
+    </tr>
+</table>
 </div>    
 
     
@@ -459,16 +445,24 @@
 </table>  
 </div>      
 
-</div><!--record of services form-->
-    
+
+<div class=recordtable>    
 <!--Comments-->    
 <h1>Comments</h1>
     <textarea name="ros[]" rows="4" cols="50"></textarea><br>
     
     
 <!--Form submission-->    
-<input id="submit" type="submit">
+<input id="submit" type="submit" value="Submit Assessment"onclick="confirmSubmission()">
     
+</div> 
+<!--end record of services form-->    
 </form>
+
+<script>
+function confirmSubmission() {
+  alert("Submission Successful");
+}
+</script>
 </body>
 </html>
