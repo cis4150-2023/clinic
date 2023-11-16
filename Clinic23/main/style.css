@@ -11,7 +11,11 @@
 * {
     box-sizing: border-box;
     margin: 0;
+<<<<<<< Updated upstream
     font-family: "Crimson Text", serif;
+=======
+    font-family: "Times New Roman", monospace;
+>>>>>>> Stashed changes
 }
 
 body {
