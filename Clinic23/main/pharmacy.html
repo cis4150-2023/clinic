@@ -1,47 +1,62 @@
 <!-- Created by: John -->
-<!-- Modified by: Ryan -->
-<!-- Modified: 11/07/23 -->
+<!-- Modified: 10/17/23 -->
 
 <!DOCTYPE html>
 <html>
     <head>
         <title> Northern Psychiatric Services </title>
-        <link rel="stylesheet" href="style.css" media="screen">
+        <link rel="stylesheet" href="style.css">
     </head>
 
 <style>
     table,
     th,
+    h3 
     td {
         text-align: center;
         border: 1px solid black;
+    }
+    h1 {
+        text-align: center;
     }
 </style>
 
 <main>
 
     <body>
-        <header>
-            patient prescriptions
-        </header>
-                <br><br>
-        <table style="width:100%">
+        <h1>Prescriptions</h1>
+        <table style="width:80%">
             <tr>
                 <th>Prescription</th>
                 <th>Use Until</th>
                 <th>Usage</th>
+                <th>Notes</th>
             </tr>
             <tr>
                 <td>Medicine A</td>
                 <td>3 months after prescription</td>
                 <td>every 3 days twice a day</td>
+                <td>has to not eat for 30 minutes after having it</td>
             </tr>
             <tr>
                 <td>Medicine B</td>
                 <td>2 weeks after prescrioption</td>
                 <td>biweekly every thursday</td>
+                <td>none</td>
             </tr>
         </table>
+        <h1>Add new prescription</h1>
+        <form>
+            <label for="prescription">Name:</label>
+            <input type="text" id="prescription" name="prescription">
+            <label for="until">Use Until:</label>
+            <input type="text" id="until" name="until">
+            <label for="usage">Usage:</label>
+            <input type="text" id="usage" name="usage">
+            <label for="notes">Notes:</label>
+            <input type="text" id="notes" name="notes"><br>
+            <input type="submit">
+        </form>
     </body>
 </main>
 
