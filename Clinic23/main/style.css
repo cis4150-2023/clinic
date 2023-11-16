@@ -603,13 +603,15 @@ form {border: 3px solid --form;}
 }
 
 button {
-  background-color: var(--button);
-  color: --buttonTxt;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
+    background-color: var(--button);
+    border: var(--border);
+    border-radius: 0.5em;
+    color: var(--buttonTxt);
+    font-size: 1.25em;
+    padding: 6px 12px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
 button:hover {
@@ -666,8 +668,3 @@ display: flex;
 margin: 40px 50px;
 padding: 30px;
 }
-label{
-    width:100px;
-    display:inline-block;
-}
-
