@@ -7,6 +7,17 @@
         <title>Clinic23 Add New Calendar Event</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
+        <style>
+            #submit{
+                position:fixed;
+                right: 5%;
+                bottom: 5%;
+                padding: 1.5%
+            }
+            #submit:hover{
+                background: #008BFF;
+            }
+        </style>
     </head>
     <div>
         <body>
@@ -46,8 +57,8 @@
                     <td><textarea name="Notes" rows="4" cols="50"></textarea></td>
                 </tr>
             </table>
-            <a href="clinic23_calendar.html" style="position:fixed; right: 17%; bottom: 5%; padding: 1.5%">Back</a>
-            <input style="position:fixed; right: 5%; bottom: 5%; padding: 1.5%" type="submit" onclick="submittedEvent()">
+            <a href="clinic23_calendar.html" style="position:fixed; left: 5%; bottom: 5%; padding: 1.5%">Back</a>
+            <input id="submit" type="submit" value="Create Appointment" onclick="submittedEvent()">
             </form>
         </body>
     </div>
