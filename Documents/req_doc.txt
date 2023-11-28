@@ -3,7 +3,7 @@
 Expectations for the outcome of the project
 
 Improve on last year.
-Easily accessible web/database system for Northern Psychiatrics (EMR)
+Easily accessible web/database system for Northern Psychiatrists (EMR)
 
 
 ### 1.2 Intended Audience
