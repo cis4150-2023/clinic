@@ -8,21 +8,19 @@ Credits:
 
   Spring 2023 Team - Built the foundation we stand (and improve) upon. 
  
-  Backing/Inner-Workings Team:
-  - Evan Morse - Team Leader/Coordinator & Github
-  - Luke Aiden - Database Designer
- 
   Financing Team:
   - Cody Rosa - Coder
   - Justin Dorman - Coder
   - Nick Slocik - Team Leader/Coordinator
  
-  Interface Team:
+  Interface & Database Team:
   - Austin Hegarty - PHP Coder/Documentarian
   - David Howard - Webpage Designer
+  - Evan Morse - Co-Team Leader/Coordinator (Database) & Github Creator
   - John Luce - PHP Coder/Documentarian
   - Josh Remillard - Webpage Designer
   - Kathleen Niekrewicz - Webpage Designer
+  - Luke Aiden - Co-Database Designer
   - Ryan Shirlock - Team Leader/Coordinator & Webpage Designer
  
   Work-Orders Team:
