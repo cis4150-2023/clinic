@@ -10,22 +10,22 @@ Credits:
  
   Financing Team:
   - Cody Rosa - Coder
-  - Justin Dorman - Coder
+  - Justin Dorman - Financial Operator
   - Nick Slocik - Team Leader/Coordinator
  
   Interface & Database Team:
-  - Austin Hegarty - PHP Coder/Documentarian
-  - David Howard - Webpage Designer
-  - Evan Morse - Co-Team Leader/Coordinator (Database) & Github Creator
-  - John Luce - PHP Coder/Documentarian
-  - Josh Remillard - Webpage Designer
-  - Kathleen Niekrewicz - Webpage Designer
+  - Austin Hegarty - HTML Designer (Calendar), PHP Coder/Documentarian
+  - David Howard - HTML Designer (Billing)
+  - Evan Morse - Co-Team Leader/Coordinator (Database) & GitHub Creator
+  - John Luce - HTML Designer (Medications/Work order), PHP Coder/Documentarian
+  - Josh Remillard - HTML Designer (Patient Medical Records & Medical History)
+  - Kathleen Niekrewicz - HTML Designer (Landing, Login, User Creation & Patient List)
   - Luke Aiden - Co-Database Designer
-  - Ryan Shirlock - Team Leader/Coordinator & Webpage Designer
+  - Ryan Shirlock - Team Leader/Coordinator & HTML Designer (Practitioner View, HTML Index, Notes & Patient Info)
  
   Work-Orders Team:
   - Alex Xylona - Programmer
   - Bailey Jackson - Programmer
   - Gabriel Buxton - Programmer
   - Linden Griffith - Programmer
-  - Myles Pierce - Team Leader/Coordinator
+  - Myles Pierce - Team Leader/Coordinator & Programmer
