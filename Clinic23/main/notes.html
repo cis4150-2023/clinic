@@ -12,10 +12,15 @@
     
     <body>
     
-        <h1>Patient Notes:</h1>
-        <textarea name="ros[]" rows="25" cols="50"></textarea><br>
-        <!--Form submission-->    
-        <input id="submit" type="submit">
+        <div id="form">
+            <h1> Patient Notes </h1>
+            <form  method="get" action="http://lemuria.cis.vtc.edu/~rshirloc/Public_HTML/notes.php">
+            <label for="enterDesc">Enter the notes for your patient below:</label> <br>
+            <textarea name="description"id="desc" rows="30" cols="35">
+            </textarea> <br>
+            <input type="submit">
+            </form>
+        </div>
     
     </body>
     
