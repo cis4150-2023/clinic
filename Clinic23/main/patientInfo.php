@@ -12,8 +12,7 @@ $patientInfo = $_GET['patientInfo'];
 $query = "SELECT first_name, last_name, gender, DOB, phone_number, email, street, city, state, zip_code FROM patient";
 
 try {
-    $connection = new PDO(pgsql:host="lemuria";dbname="medical_server","cis4250","blibber");
-    echo "Searching in patient table:<br/>";
+    $connection = new $db = pg_connect("host=lemuria dbname=medical_server user=cis4250 password=blibber");
 
     foreach($connection->query($query) as $row) {
         echo "Name: ";
