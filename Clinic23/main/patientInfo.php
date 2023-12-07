@@ -14,7 +14,7 @@ $query = "SELECT first_name, last_name, gender, DOB, phone_number, email, street
 try {
     $connection = new $db = pg_connect("host=lemuria dbname=medical_server user=cis4250 password=blibber");
 
-    if ($con)
+    if ($connection)
         echo"Test Sucsessful!";
     else
         echo "Not Connected";
