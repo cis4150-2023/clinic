@@ -12,12 +12,16 @@ $patientInfo = $_GET['patientInfo'];
 $query = "SELECT first_name, last_name, gender, DOB, phone_number, email, street, city, state, zip_code FROM patient";
 
 try {
-    $connection = pg_connect("host=lemuria dbname=medical_server user=cis4250 password=blibber");
-
-    if ($connection)
-        echo"Test Sucsessful!";
-    else
-        echo "Not Connected";
+    echo "conecting...<br>";
+    $db =pg_connect("host=lemuria dbname=medical_server user=cis4250 password=blibber");
+    if ($db->connect_errno > 0){
+      echo "<p>Error: Could not connect to database.<br></p>";
+      exit;
+    }
+    else{
+        echo "conected!";
+    }
+    
     foreach($connection->query($query) as $row) {
         echo "Name: ";
         print_r($row["first_name"]);
