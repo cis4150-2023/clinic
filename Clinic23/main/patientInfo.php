@@ -2,7 +2,7 @@
 <!-- Modified: 12/06/23 -->
 
 <?php
-$servername = "lemuria";
+$servername = "lemuria.cis.vermontstate.edu";
 $username   = "cis4250";
 $password   = "blibber"; 
 $dbname     = "medical_server";
@@ -13,7 +13,7 @@ $query = "SELECT first_name, last_name, gender, DOB, phone_number, email, street
 
 try {
     echo "conecting...<br>";
-    $db =pg_connect("host=lemuria dbname=medical_server user=cis4250 password=blibber");
+    $db=pg_connect("host=lemuria dbname=medical_server user=cis4250 password=blibber");
     if ($db->connect_errno > 0){
       echo "<p>Error: Could not connect to database.<br></p>";
       exit;
