@@ -12,7 +12,7 @@ $patientInfo = $_GET['patientInfo'];
 $query = "SELECT first_name, last_name, gender, DOB, phone_number, email, street, city, state, zip_code FROM patient";
 
 try {
-    $connection = new $db = pg_connect("host=lemuria dbname=medical_server user=cis4250 password=blibber");
+    $connection = pg_connect("host=lemuria dbname=medical_server user=cis4250 password=blibber");
 
     if ($connection)
         echo"Test Sucsessful!";
