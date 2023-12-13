@@ -1,105 +1,119 @@
 <!DOCTYPE html>
 <html>
-<main>
-    <html>
+<head>
+    <title> Northern Psychiatric Services </title>
     <link rel="stylesheet" href="style.css">
-    </html>
-    <body>
-    <?php
+</head>
+<body>
 
-    $host = "lemuria.cis.vermontstate.edu";
-    $dbname = "medical_server";
-    $user = "cis4250";
-    $password = "blibber";
+<?php
 
-    // Initiate a connection to the server
-    $conn = pg_connect("host=$host dbname=$dbname user=$user password=$password");
+$host = "lemuria.cis.vermontstate.edu";
+$dbname = "medical_server";
+$user = "cis4250";
+$password = "blibber";
 
-    // Check connection
-    if (!$conn) {
-        die("Connection failed: " . pg_last_error());
-    }
+// Initiate a connection to the server
+$conn = pg_connect("host=$host dbname=$dbname user=$user password=$password");
 
-    // Get the patient_id from the form
-    $patient_id = $_POST['patient_id'];
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . pg_last_error());
+}
 
-    // Fetch patient information from the database
-    $query = "SELECT 
-                patient_name, 
+// Get the patient_id from the form
+$patient_id = $_POST['patient_id'];
+
+// Fetch patient information from the database
+$patientQuery = "SELECT 
+                first_name, 
+                last_name,
                 tin, 
-                account_number, 
-                statement_made_date, 
-                service_date, 
-                service_type, 
-                service_cost, 
-                insurance_coverage, 
-                customer_balance, 
-                patient_address, 
-                patient_city_state_zip,
-                insurance_tier, 
-                insurance_provider, 
-                policy_number
+                street,
+                city,
+                state, 
+                zip_code
               FROM patients 
               WHERE patient_id = $patient_id";
 
-    $result = pg_query($conn, $query);
-
-    if ($result) {
-        $row = pg_fetch_assoc($result);
-
-        $patient_name = $row['patient_name'];
-        $tin = $row['tin'];
-        $account_number = $row['account_number'];
-        $statement_made_date = $row['statement_made_date'];
-
-        $service_date = $row['service_date'];
-        $service_type = $row['service_type'];
-        $service_cost = $row['service_cost'];
-        $insurance_coverage = $row['insurance_coverage'];
-        $customer_balance = $row['customer_balance'];
-
-        $patient_address = $row['patient_address'];
-        $patient_city_state_zip = $row['patient_city_state_zip'];
-
-        $insurance_tier = $row['insurance_tier'];
-        $insurance_provider = $row['insurance_provider'];
-        $policy_number = $row['policy_number'];
-    } else {
-        echo "Query error: " . pg_last_error();
+$patientResult = pg_query($conn, $patientQuery);
+if ($patientResult) {
+    $patientRow = pg_fetch_assoc($patientResult);
+    if ($patientRow){
+        $patient_name = $patientRow['first_name'] . " " . $patientRow['last_name'];
+        $tin = $patientRow['tin'];
+        $account_number = $patientRow['account_number'];
+        $street = $patientRow['street'];
+        $city = $patientRow['city'];
+        $state = $patientRow['state'];
+        $zip_code = $patientRow['zip_code'];
     }
+    else{
+        echo "Patient not found.";
+    }
+} else {
+    echo "Patient Query error: " . pg_last_error();
+}
 
-    // Close the database connection
-    pg_close($conn);
-    ?>
+// Fetch billing information from the database
+$billingQuery = "SELECT 
+                statement_made, 
+                service_date, 
+                service_type, 
+                service_provided,
+                total_charge, 
+                insurance_payment,
+                patient_payment, 
+                due_date
+              FROM payment 
+              WHERE patient_id = $patient_id";
+
+$billingResult = pg_query($conn, $billingQuery);
+if ($billingResult) {
+    $billingRow = pg_fetch_assoc($billingResult);
+    if ($billingRow){
+        $statement_made = $billingRow['statement_made'];
+        $service_date = $billingRow['service_date'];
+        $service_provided = $billingRow['service_provided'];
+        $total_charge = $billingRow['total_charge'];
+        $insurance_payment = $billingRow['insurance_payment'];
+        $customer_balance = $billingRow['patient_payment'];
+        $due_date = $billingRow['due_date'];
+    }else{
+        echo "Billing information not found.";
+    }
+} else {
+    echo "Billing Query error: " . pg_last_error();
+}
+
+// Close the database connection
+pg_close($conn);
+?>
+
+
+<div style="border: 2px solid black; position: relative;">
+    Northern Psychiatric Services<br>
+    <br>
+    Account #: <?php echo $tin; ?> <br>
+    Patient Name: <?php echo $patient_name; ?> <br>
+    Patient Address: <?php echo $street; ?> <br>
+    Patient City, State, Zip: <?php echo $city . ", " . $state . ", " . $zip_code; ?> <br>
     <div style="border: 2px solid black; position: relative;">
-        Northern Psychiatric Services<br>
-        <br>
-        Patient Name: <?php echo $patient_name; ?> <br>
-        Patient Address: <?php echo $patient_address; ?> <br>
-        Patient City, State, Zip: <?php echo $patient_city_state_zip; ?> <br>
-        <div style="border: 2px solid black; position: relative;">
-            Statement Made: <?php echo $statement_made_date; ?> <br>
-        </div>
-        <div style="border: 2px solid black; position: relative;">
-            Billing Information <br>
-            <br>
-            Service Date: <?php echo $service_date; ?> <br>
-            Service Type: <?php echo $service_type; ?> <br>
-            Account #: <?php echo $account_number; ?> <br>
-            Service Cost: <?php echo $service_cost; ?> <br>
-            Insurance Coverage: <?php echo $insurance_coverage; ?> <br>
-            Customer Balance: <?php echo $customer_balance; ?> <br>
-
-        </div>
-        <div style="border: 2px solid black; position: relative;">
-            Insurance Information <br>
-            <br>
-            Insurance Tier: <?php echo $insurance_tier; ?> <br>
-            Insurance Provider: <?php echo $insurance_provider; ?> <br>
-            Policy Number: <?php echo $policy_number; ?> <br>
-        </div>
+        Statement Made: <?php echo $statement_made; ?> <br>
     </div>
-    <a href="Billing Statement Page.html">New Statement</a>
-    </body>
-</main>
+    <div style="border: 2px solid black; position: relative;">
+        Billing Information <br>
+        <br>
+        Service Date: <?php echo $service_date; ?> <br>
+        Service Type: <?php echo $service_provided; ?> <br>
+        Service Cost: <?php echo $total_charge; ?> <br>
+        Insurance Coverage: <?php echo $insurance_payment; ?> <br>
+        Customer Balance: <?php echo $customer_balance; ?> <br>
+        Due Date: <?php echo $due_date; ?> <br>
+    </div>
+</div>
+<a href="Billing Statement Page.html">New Statement</a>
+</body>
+
 </html>
+
