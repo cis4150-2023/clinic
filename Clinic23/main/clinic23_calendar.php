@@ -182,6 +182,33 @@ header .calendar-current-date {
 		</div>
 	</div>
 	<a href="calendar_addevent.html" id="fixedButton" class="calendar">Add New Appointment</a>
+    <?php
+            $db_handle = pg_connect("host=lemuria dbname=medical_server user=cis4250 password=blibber"); 
+            if(!$db_handle){
+                echo "<p>Error: Database could not connect.<br></p>";
+                exit;
+            }
+            session_start();
+            $query = "SELECT COUNT(*) FROM appointment";
+            $result = pg_exec($db_handle, $query);
+            if($result > 0){
+                for($ID = 0; $ID <= $result; $ID++){
+                $doctorID = pg_exec($db_handle, "SELECT practitionerID FROM appointment WHERE appointmentID = $ID");
+                $doctorName = pg_exec($db_handle, "SELECT first_name FROM practitioner WHERE practitionerID = $doctorID");
+                $patientID = pg_exec($db_handle, "SELECT patientID FROM appointment WHERE appointmentID = $ID");
+                $patientName = pg_exec($db_handle, "SELECT first_name FROM patient WHERE patientID = $patientID");
+                $a_type = pg_exec($db_handle, "SELECT a_typeID FROM appointment WHERE appointmentID = $ID");
+                $proceduree = pg_exec($db_handle, "SELECT procedureeID FROM appointment WHERE appointmentID = $ID");
+                $test = pg_exec($db_handle, "SELECT testID FROM appointment WHERE appointmentID = $ID");
+                $date = pg_exec($db_handle, "SELECT appointment_date FROM appointment WHERE appointmentID = $ID");
+                $note = pg_exec($db_handle, "SELECT note FROM appointment WHERE appointmentID = $ID");
+                $dateStart = pg_exec($db_handle, "SELECT startt FROM appointment WHERE appointmentID = $ID");
+                $dateEnd = pg_exec($db_handle, "SELECT endd FROM appointment WHERE appointmentID = $ID");
+                echo "<p> Appointment $ID information- appointment type: $a_type, proceduree: $proceedure, test: $test, date of appointment: $date, notes: $note, doctor name: $doctorName, start date and time: $dateStart, end date and time: $dateEnd, patient name: $patientName </p>";
+                }
+            }
+            pg_close($db_handle);
+            ?>
 </body>
 <script>
     let date = new Date();
