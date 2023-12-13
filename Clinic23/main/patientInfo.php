@@ -9,27 +9,21 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
     <body>
-    
+        <div class="info">
         <?php
         $servername = "lemuria.cis.vermontstate.edu";
-        $username   = "cis4250";
-        $password   = "blibber"; 
-        $dbname     = "medical_server";
+        $username = "cis4250";
+        $password = "blibber"; 
+        $dbname = "medical_server";
 
+        $dbh = pg_connect("host=lemuria dbname=medical_server user=cis4150 password=blibber");
+        if(!$dbh){
+            echo "<p>Error: Database could not connect.</p>";
+            exit;
+        }
         $patientInfo = $_GET['patientInfo'];
 
         $query = "SELECT first_name, last_name, gender, DOB, phone_number, email, street, city, state, zip_code FROM patient";
-
-        try {
-            echo "conecting...<br/>";
-            $db=pg_connect("host=lemuria.cis.vermontstate.edu dbname=medical_server user=cis4250 password=blibber");
-            if ($db->connect_errno > 0){
-                echo "<p>Error: Could not connect to database.<br/></p>";
-                exit;
-            }
-            else {
-                echo "conected!";
-            }
     
         foreach($connection->query($query) as $row) {
             echo "Name: ";
@@ -62,6 +56,8 @@
                 die();
             }
         ?>  
+        </div>
+        
         <b>Contacts: </b>
         <b>#1: </b>
         <P> - Thomas Shenkov {Emergency} </p>
