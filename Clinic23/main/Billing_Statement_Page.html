@@ -10,7 +10,7 @@
 		<body>
 			<div>
 			<h1>Billing Statement</h1>
-			<form action="Billing Statement Display.html" method="post">
+			<form action="Billing_Statement_Display.html" method="post">
 				<label>Statement Made:
 				<input type="date" name ="submit_date"></label><br>
 				<label>Account Number:
@@ -33,6 +33,17 @@
 				<label>Does patient have insurance?</label>
 				<button id="yesInsurance" onclick="formShow()">Yes</button> 
 				<button id="noInsurance" onclick="formHide()">No</button><br>
+				<div id="insuranceForm" style="display:none;">
+					<label>Insurance Provider:
+					<input type ="text"></label><br>
+					<label>Insurance Tier:
+					<select name="insurance">
+						<option value="tier1" selected>Tier 1</option>
+						<option value="tier2">Tier 2</option>
+						<option value="tier3">Tier 3</option>
+					</select></label><br>
+				<label>Policy Number:
+				<input type="text"></label><br>
 				<div id="copayForm" style="display:none;">
 					<label>Copay: $
 					<input id="copayInput" type ="number" min= "0.00" step="0.01" name = "copay"></label><br>
