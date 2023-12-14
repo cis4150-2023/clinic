@@ -16,11 +16,11 @@ Credits:
   Interface & Database Team:
   - Austin Hegarty - HTML Designer (Calendar), PHP Coder/Documentarian
   - David Howard - HTML Designer (Billing)
-  - Evan Morse - Co-Team Leader/Coordinator (Database) & GitHub Creator
+  - Evan Morse - Co-Team Leader/Coordinator & GitHub Creator
   - John Luce - HTML Designer (Medications/Work order), PHP Coder/Documentarian
   - Josh Remillard - HTML Designer (Patient Medical Records & Medical History)
   - Kathleen Niekrewicz - HTML Designer (Landing, Login, User Creation & Patient List)
-  - Luke Aiden - Co-Database Designer
+  - Luke Aiden - Database Designer
   - Ryan Shirlock - Team Leader/Coordinator & HTML Designer (Practitioner View, HTML Index, Notes & Patient Info)
  
   Work-Orders Team:
